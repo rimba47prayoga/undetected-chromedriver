@@ -151,6 +151,9 @@ class Patcher(object):
             else:
                 return
 
+        if self.is_binary_patched():
+            return True
+
         if version_main:
             self.version_main = version_main
         if force is True:
